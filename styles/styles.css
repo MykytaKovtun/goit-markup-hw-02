@@ -92,6 +92,8 @@ body{
     --color-title: #212121;
     --color-subtitle: #757575;
     --color-hoverfocus: #2196F3;
+    --color-forbackground: #FFFFFF;
+    
 }
 /* header */
 /*logo*/
@@ -135,6 +137,7 @@ body{
 }
 
 
+
 .feedback {}
 
 .feedback-item {
@@ -161,7 +164,7 @@ body{
     line-height: 1.4;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color-forbackground);
     letter-spacing: 0.06em;
 }
 
@@ -270,6 +273,7 @@ footer{
     font-size: 14px;
     line-height: 1.7;
     color: #FFFFFF;
+    font-style: normal;
 }
 .contact-map:hover{
     letter-spacing: 0.03em;
@@ -282,6 +286,7 @@ footer{
     font-size: 14px;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
 }
 .contact-item:hover {
     letter-spacing: 0.03em;
@@ -294,3 +299,45 @@ footer{
 }
 
 /* main portfolio */
+.porfolio {
+    visibility: hidden;
+}
+
+.porfolio-filter {
+
+}
+
+.porfolio-position {
+    color: var(--color-title);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+    padding: 6px 22px;
+}
+.porfolio-position:hover{
+    letter-spacing: 0.03em;
+    background-color: var(--color-hoverfocus);
+    color: var(--color-forbackground);
+}
+.porfolio-position:focus {
+    letter-spacing: 0.03em;
+    background-color: var(--color-hoverfocus);
+    color: var(--color-forbackground);
+}
+.porfolio-list {}
+
+.porfolio-item {}
+
+.porfolio-item-headline {
+    color: var(--color-title);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.porfolio-item-paragraf {
+    color: var(--color-subtitle);
+    font-size: 16px;
+    line-height: 1.9;
+}
