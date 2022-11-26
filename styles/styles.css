@@ -183,8 +183,11 @@ body{
     color: #FFFFFF;
     letter-spacing: 0.06em;
 }
+.maintitle-button:active{
+    background: #188CE8;
+}
 
-.features {
+.features  {
     visibility: hidden;
 }
 
