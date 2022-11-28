@@ -7,61 +7,9 @@
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
-
-*,
-* ::before,
-*::after {
-    box-sizing: border-box;
-}
-
-:focus,
-:active {
-    outline: none;
-}
-
-a:focus,
-a:active {
-    outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-    display: block;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-    font-family: inherit;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
 button {
     cursor: pointer;
 }
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
 a,
 a:visited {
     text-decoration: none;
@@ -70,54 +18,41 @@ a:visited {
 ul li {
     list-style: none;
 }
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: 400;
-}
 body{
     font-family: 'Roboto', sans-serif;
+    color: var(--color-title);
+    background-color: var(--color-forbackground);
+    font-size: 14px;
 }
-
 :root {
     --color-title: #212121;
     --color-subtitle: #757575;
     --color-hoverfocus: #2196F3;
     --color-forbackground: #FFFFFF;
-    
+    --color-maintitle: #2F303A;
+    --color-hoverfocusbutton: #188CE8;
+    --color-grey: #F5F4FA;
 }
 /* header */
 /*logo*/
-.logo1:hover{
-    letter-spacing: 0.03em;
-}
-.logo1:focus {
+.logo{
     letter-spacing: 0.03em;
 }
 
-.part1 {
-    font-family: 'Raleway';
+.web{
+    font-family: 'Raleway' ,sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    color: #2196F3;
+    color: var(--color-hoverfocus)
 }
 
-.part2 {
-    font-family: 'Raleway';
+.studio {
+    font-family: 'Raleway' ,sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    color: black;
+    color: var(--color-title)
 }
 .navigation {}
 
@@ -126,14 +61,13 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
+
 }
 .navigation-item:hover{
-    letter-spacing: 0.02em;
     color: var(--color-hoverfocus);
 }
 .navigation-item:focus {
-    letter-spacing: 0.02em;
-    color: var(--color-hoverfocus)
+    color: var(--color-hoverfocus);
 }
 
 
@@ -145,18 +79,17 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 .feedback-item:hover{
-    letter-spacing: 0.02em;
     color: var(--color-hoverfocus);
 }
 .feedback-item:focus{
-    letter-spacing: 0.02em;
     color: var(--color-hoverfocus);
 }
 /* main index */
 .primary-maintitle{
-    background: #2F303A;
+    background: var(--color-maintitle)
 }
 .maintitle {
     font-weight: 900;
@@ -172,7 +105,7 @@ body{
 .maintitle-button {
     width: 216px;
     height: 50px;
-    background: #2196F3;
+    background: var(--color-hoverfocus);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-weight: 700;
@@ -180,15 +113,28 @@ body{
     line-height: 2;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--color-forbackground);
     letter-spacing: 0.06em;
 }
-.maintitle-button:active{
-    background: #188CE8;
+
+.maintitle-button:hover{
+    background-color: var(--color-hoverfocusbutton);
 }
 
-.features  {
-    visibility: hidden;
+.maintitle-button:focus {
+    background-color: var(--color-hoverfocusbutton);
+}
+.visuallity-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .subfeatures {}
@@ -224,8 +170,14 @@ body{
    
 }
 
-.list-item {}
 
+
+.team{
+    background: var(--color-grey);
+}
+.list-item {
+    background: var(--color-forbackground);
+}
 .heading-team {
     color: var(--color-title);
     font-weight: 700;
@@ -259,15 +211,25 @@ body{
 footer{
     background: #2F303A;
 }
-.logo2{}
-.logo2:hover {
+.logo2 {
     letter-spacing: 0.03em;
 }
 
-.logo2:focus {
-    letter-spacing: 0.03em;
+.logo2-web {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--color-hoverfocus);
 }
 
+.logo2-studio {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--color-forbackground);
+}
 .contact {}
 
 .contact-list {}
@@ -275,14 +237,16 @@ footer{
 .contact-map {
     font-size: 14px;
     line-height: 1.7;
-    color: #FFFFFF;
+    color: var(--color-forbackground);
     font-style: normal;
-}
-.contact-map:hover{
     letter-spacing: 0.03em;
 }
+.contact-map:hover {
+    color: var(--color-hoverfocus);
+}
+
 .contact-map:focus {
-    letter-spacing: 0.03em;
+    color: var(--color-hoverfocus);
 }
 
 .contact-item {
@@ -290,21 +254,18 @@ footer{
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
+    letter-spacing: 0.03em;
 }
 .contact-item:hover {
-    letter-spacing: 0.03em;
     color: var(--color-hoverfocus);
 }
 
 .contact-item:focus {
-    letter-spacing: 0.03em;
     color: var(--color-hoverfocus);
 }
 
 /* main portfolio */
-.porfolio {
-    visibility: hidden;
-}
+
 
 .porfolio-filter {
 
@@ -317,14 +278,13 @@ footer{
     line-height: 1.7;
     text-align: center;
     padding: 6px 22px;
+    letter-spacing: 0.03em;
 }
 .porfolio-position:hover{
-    letter-spacing: 0.03em;
     background-color: var(--color-hoverfocus);
     color: var(--color-forbackground);
 }
 .porfolio-position:focus {
-    letter-spacing: 0.03em;
     background-color: var(--color-hoverfocus);
     color: var(--color-forbackground);
 }
